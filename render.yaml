@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: caravan-moderator-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: RULES_MESSAGE_LINK
+        sync: false
